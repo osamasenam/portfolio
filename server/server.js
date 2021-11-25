@@ -7,6 +7,12 @@ app.use(compression());
 
 app.use(express.static(path.join(__dirname, "..", "client", "public")));
 
+// app.get('/connect4', function(req, res) {
+//     console.log("open connect4 ");
+//     res.sendFile(path.join(__dirname, "..",'connect4' , '/index.html'));
+// });
+  
+
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "client", "index.html"));
 });
